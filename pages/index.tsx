@@ -6,9 +6,7 @@ const Index = () => (
     <Head>
       <title>Hacker News Stories</title>
     </Head>
-    <div className="container">
-      <Stories />
-    </div>
+    <Stories />
   </>
 );
 

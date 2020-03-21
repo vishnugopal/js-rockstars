@@ -3,6 +3,7 @@ interface StoryParameters {
   url: string;
   title: string;
   timestamp: number;
+  time: number;
 }
 
 export default StoryParameters;

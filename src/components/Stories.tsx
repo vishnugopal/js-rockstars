@@ -19,12 +19,12 @@ const Stories = () => {
         )
       );
 
-      if (error) return <div>failed to load</div>;
+      if (error) return <div>failed to load stories</div>;
       if (!storyIds) return <div>...</div>;
       return (
         <>
-          {storyIds.map(storyId => (
-            <Story key={storyId} itemId={storyId} />
+          {storyIds.map((storyId, storyIndex) => (
+            <Story key={storyId} itemId={storyId} itemIndex={storyIndex + 1} />
           ))}
         </>
       );
@@ -60,8 +60,10 @@ const Stories = () => {
 
   return (
     <>
-      <div>
-        <h1>Hacker News Stories</h1>
+      <div className="container max-w-lg mx-auto mt-2">
+        <div className="bg-orange-500 p-1 mb-2">
+          <h1>Hacker News Stories</h1>
+        </div>
         {pages}
         <button
           onClick={loadMore}
