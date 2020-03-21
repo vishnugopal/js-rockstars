@@ -12,7 +12,7 @@ const Story: React.FC<StoryProps> = ({ itemId }) => {
     fetch
   );
   if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (!data) return <div>...</div>;
   return (
     <div>
       {itemId} {data.by} <a href={data.url}>{data.title}</a>

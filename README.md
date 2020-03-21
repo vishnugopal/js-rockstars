@@ -28,8 +28,8 @@ yarn start
 
 ## TODO
 
-[x] Simple fetch using SWR
-[ ] Infinite Pagination using useSWRPages()
+[x] Simple fetch using SWR (took ~ 1 hour)
+[x] Infinite Pagination using useSWRPages() (took ~3 hours)
 [ ] PWA using next-pwa
 [ ] Styling using Tailwind
 [ ] Cypress Testing

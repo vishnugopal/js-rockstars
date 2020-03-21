@@ -10,8 +10,6 @@ export default async function(
   const fetchOffset = Number(inputUrl?.searchParams.get("offset")) || 0;
   const fetchCount = Number(inputUrl?.searchParams.get("count")) || 100;
 
-  console.log(fetchOffset);
-
   /**
    * The HN API does not support any offset, so we always fetch everything, and just
    * offset from the ID provided.
@@ -23,13 +21,11 @@ export default async function(
    * Get all values in the response that have a lower storyId than the provided offset.
    */
   const storiesOffset =
-    fetchOffset == 0
+    fetchOffset == 0 // The first time offset is 0
       ? storiesResponse
       : storiesResponse.filter(storyId => storyId < fetchOffset - 1);
 
   const storiesOffsetAndLimited = storiesOffset.slice(0, fetchCount);
-  console.log(storiesOffsetAndLimited[storiesOffsetAndLimited.length - 1]);
-  console.log(storiesOffsetAndLimited);
 
   return Promise.resolve(storiesOffsetAndLimited);
 }

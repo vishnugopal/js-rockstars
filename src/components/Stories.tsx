@@ -2,6 +2,7 @@ import useSWR, { useSWRPages } from "swr";
 import fetchStories from "../fetchStories";
 import StoryIds from "../types/StoryIds";
 import Story from "./Story";
+import { useRef, useCallback, useEffect } from "react";
 
 const Stories = () => {
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useSWRPages<
@@ -19,10 +20,10 @@ const Stories = () => {
       );
 
       if (error) return <div>failed to load</div>;
-      if (!storyIds) return <div>loading...</div>;
+      if (!storyIds) return <div>...</div>;
       return (
         <>
-          {storyIds.slice(0, 10).map(storyId => (
+          {storyIds.map(storyId => (
             <Story key={storyId} itemId={storyId} />
           ))}
         </>
@@ -36,15 +37,49 @@ const Stories = () => {
     []
   );
 
+  // Implement infinite scrolling with intersection observer
+  let bottomBoundaryRef = useRef(null);
+  let loadMoreButtonRef = useRef<HTMLButtonElement>(null);
+  const scrollObserver = useCallback(node => {
+    new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.intersectionRatio > 0) {
+          console.log("hello");
+          loadMoreButtonRef.current?.click();
+        }
+      });
+    }).observe(node);
+  }, []);
+  useEffect(() => {
+    if (bottomBoundaryRef.current) {
+      scrollObserver(bottomBoundaryRef.current);
+    }
+  }, [scrollObserver, bottomBoundaryRef]);
+
   return (
-    <div>
-      <h1>Pagination (offset from data)</h1>
-      {pages}
-      <button onClick={loadMore} disabled={isReachingEnd || isLoadingMore}>
-        {isLoadingMore ? ". . ." : isReachingEnd ? "no more data" : "load more"}
-      </button>
-      <hr />
-    </div>
+    <>
+      <div>
+        <h1>Hacker News Stories</h1>
+        {pages}
+        <button
+          onClick={loadMore}
+          disabled={isReachingEnd || isLoadingMore}
+          ref={loadMoreButtonRef}
+        >
+          {isLoadingMore
+            ? ". . ."
+            : isReachingEnd
+            ? "no more data"
+            : "load more"}
+        </button>
+        <hr />
+      </div>
+      <div
+        id="page-bottom-boundary"
+        style={{ border: "1px solid red" }}
+        ref={bottomBoundaryRef}
+      ></div>
+    </>
   );
 };
 
