@@ -60,11 +60,11 @@ const Stories = () => {
 
   return (
     <>
-      <div className="container max-w-lg mx-auto mt-2">
-        <div className="bg-orange-500 p-1 mb-2">
+      <div className="bg-orange-100 container max-w-lg mx-auto mt-2">
+        <div className="bg-orange-500 p-1 pb-2">
           <h1>Hacker News Stories</h1>
         </div>
-        {pages}
+        <div className="p-2">{pages}</div>
         <button
           onClick={loadMore}
           disabled={isReachingEnd || isLoadingMore}
@@ -78,11 +78,7 @@ const Stories = () => {
         </button>
         <hr />
       </div>
-      <div
-        id="page-bottom-boundary"
-        style={{ border: "1px solid red" }}
-        ref={bottomBoundaryRef}
-      ></div>
+      <div id="page-bottom-boundary" ref={bottomBoundaryRef}></div>
     </>
   );
 };
