@@ -31,6 +31,6 @@ yarn start
 [x] Simple fetch using SWR (took ~ 1 hour)
 [x] Infinite Pagination using useSWRPages() & IntersectionObserver (took ~3 hours)
 [x] Offline support using next-offline (took ~3 hours)
-[ ] Styling using Tailwind
+[x] Styling using Tailwind (took ~2 hours)
 [ ] Cypress Testing
 [ ] react-testing-library

@@ -2,7 +2,7 @@ import useSWR from "swr";
 import { fromUnixTime, formatRelative } from "date-fns";
 
 import fetch from "../fetch";
-import StoryParameters from "../types/StoryParameters";
+import StoryResponse from "../types/StoryResponse";
 
 interface StoryProps {
   itemId: number;
@@ -15,7 +15,7 @@ const formattedRelativeDate = (unixTimestamp: number) => {
 };
 
 const Story: React.FC<StoryProps> = ({ itemId, itemIndex }) => {
-  const { data, error } = useSWR<StoryParameters>(
+  const { data, error } = useSWR<StoryResponse>(
     `https://hacker-news.firebaseio.com/v0/item/${itemId}.json`,
     fetch
   );

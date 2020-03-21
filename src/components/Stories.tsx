@@ -1,17 +1,17 @@
 import useSWR, { useSWRPages } from "swr";
 import fetchStories from "../fetchStories";
-import StoryIds from "../types/StoryIds";
 import Story from "./Story";
 import { useRef, useCallback, useEffect } from "react";
+import StoriesResponse from "../types/StoriesResponse";
 
 const Stories = () => {
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useSWRPages<
     number | null,
-    StoryIds
+    StoriesResponse
   >(
     "stories",
     ({ offset, withSWR }) => {
-      const { data: storyIds, error } = withSWR(
+      const { data: storyItems, error } = withSWR(
         useSWR(
           `https://hacker-news.firebaseio.com/v0/newstories.json?offset=${offset ||
             0}`,
@@ -20,18 +20,18 @@ const Stories = () => {
       );
 
       if (error) return <div>failed to load stories</div>;
-      if (!storyIds) return <div>...</div>;
+      if (!storyItems) return <div>...</div>;
       return (
         <>
-          {storyIds.map((storyId, storyIndex) => (
+          {storyItems.map(({ storyId, index: storyIndex }) => (
             <Story key={storyId} itemId={storyId} itemIndex={storyIndex + 1} />
           ))}
         </>
       );
     },
-    ({ data: storyIds }) => {
-      return storyIds && storyIds.length
-        ? storyIds[storyIds.length - 1] + 1
+    ({ data: storyItems }) => {
+      return storyItems && storyItems.length
+        ? storyItems[storyItems.length - 1].storyId + 1
         : null;
     },
     []
