@@ -15,7 +15,7 @@ const Story: React.FC<StoryProps> = ({ itemId }) => {
   if (!data) return <div>loading...</div>;
   return (
     <div>
-      {data.by} <a href={data.url}>{data.title}</a>
+      {itemId} {data.by} <a href={data.url}>{data.title}</a>
     </div>
   );
 };
