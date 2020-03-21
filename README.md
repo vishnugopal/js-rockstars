@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-For an optimized build, please make sure to run:
+For an optimized build (this is the only build that supports offline access), please make sure to run:
 
 ```bash
 npm run build
@@ -30,7 +30,7 @@ yarn start
 
 [x] Simple fetch using SWR (took ~ 1 hour)
 [x] Infinite Pagination using useSWRPages() (took ~3 hours)
-[ ] PWA using next-pwa
+[x] Offline support using next-offline (took ~3 hours)
 [ ] Styling using Tailwind
 [ ] Cypress Testing
 [ ] react-testing-library

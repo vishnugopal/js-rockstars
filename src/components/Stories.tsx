@@ -38,18 +38,20 @@ const Stories = () => {
   );
 
   // Implement infinite scrolling with intersection observer
-  let bottomBoundaryRef = useRef(null);
+  let bottomBoundaryRef = useRef<HTMLDivElement>(null);
   let loadMoreButtonRef = useRef<HTMLButtonElement>(null);
-  const scrollObserver = useCallback(node => {
-    new IntersectionObserver(entries => {
-      entries.forEach(en => {
-        if (en.intersectionRatio > 0) {
-          console.log("hello");
-          loadMoreButtonRef.current?.click();
-        }
-      });
-    }).observe(node);
-  }, []);
+  const scrollObserver = useCallback(
+    node => {
+      new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.intersectionRatio > 0) {
+            loadMoreButtonRef.current?.click();
+          }
+        });
+      }).observe(node);
+    },
+    [loadMoreButtonRef]
+  );
   useEffect(() => {
     if (bottomBoundaryRef.current) {
       scrollObserver(bottomBoundaryRef.current);
