@@ -5,6 +5,8 @@ This is an example HN app built with:
 * [next-offline](https://github.com/hanford/next-offline) for offline caching.
 * [Tailwind](https://tailwindcss.com) for styling.
 
+This app scores pretty high on the Lighthouse speed tests, see: [this](./lighthouse-score.png).
+
 ## Development
 
 For development:
