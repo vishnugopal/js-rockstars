@@ -3,13 +3,16 @@ import fetch from "isomorphic-unfetch";
 import StoryIds from "./types/StoryIds";
 import StoriesResponse from "./types/StoriesResponse";
 
+const MAX_STORIES_TO_FETCH = 30;
+
 export default async function(
   input: RequestInfo,
   init?: RequestInit
 ): Promise<StoriesResponse> {
   const inputUrl = typeof input === "string" ? new URL(input) : undefined;
   const fetchOffset = Number(inputUrl?.searchParams.get("offset")) || 0;
-  const fetchCount = Number(inputUrl?.searchParams.get("count")) || 100;
+  const fetchCount =
+    Number(inputUrl?.searchParams.get("count")) || MAX_STORIES_TO_FETCH;
 
   /**
    * The HN API does not support any offset, so we always fetch everything, and just

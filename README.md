@@ -32,5 +32,6 @@ yarn start
 [x] Infinite Pagination using useSWRPages() & IntersectionObserver (took ~3 hours)
 [x] Offline support using next-offline (took ~3 hours)
 [x] Styling using Tailwind (took ~2 hours)
+[x] Optimize Pagespeed score (took ~1 hour)
 [ ] Cypress Testing
 [ ] react-testing-library
