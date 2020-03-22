@@ -19,7 +19,7 @@ export default class extends Document {
             name="keywords"
             content="hacker news, nextjs, pwa, swr, nodejs"
           />
-
+          <link rel="preconnect" href="https://storage.googleapis.com"></link>
           <link rel="manifest" href="/manifest.json" />
           <link
             href="/favicon-16x16.png"
