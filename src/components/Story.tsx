@@ -22,13 +22,21 @@ const Story: React.FC<StoryProps> = ({ itemId, itemIndex }) => {
   if (error) return <div>failed to load</div>;
   if (!data) return <div>...</div>;
   return (
-    <div className="mb-2 flex flex-row">
-      <div className="text-gray-600 text-sm align-top mr-2">{itemIndex}.</div>
+    <div className="mb-2 flex flex-row" data-testid={`story-${itemIndex}`}>
+      <div
+        className="text-gray-600 text-sm align-top mr-2"
+        data-testid={`story-${itemIndex}-index`}
+      >
+        {itemIndex}.
+      </div>
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col" data-testid={`story-${itemIndex}-title`}>
           <a href={data.url}>{data.title}</a>
         </div>
-        <div className="text-xs text-gray-500">
+        <div
+          className="text-xs text-gray-500"
+          data-testid={`story-${itemIndex}-author`}
+        >
           by {data.by} {formattedRelativeDate(data.time)}
         </div>
       </div>

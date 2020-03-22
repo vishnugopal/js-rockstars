@@ -1,8 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+This is an example HN app built with:
 
-## Getting Started
+* [Next.js](https://nextjs.org/)
+* [SWR](https://swr.now.sh) for data fetching & infinite scroll.
+* [next-offline](https://github.com/hanford/next-offline) for offline caching.
+* [Tailwind](https://tailwindcss.com) for styling.
 
-First, run the development server:
+## Development
+
+For development:
 
 ```bash
 npm i
@@ -12,11 +17,11 @@ yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the home page.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Production Build
 
-For an optimized build (this is the only build that supports offline access), please make sure to run:
+For an optimized build (this is the only build that supports offline access):
 
 ```bash
 npm run build
@@ -26,6 +31,16 @@ yarn build
 yarn start
 ```
 
+## Running Tests
+
+```bash
+npm run cypress:open
+npm run cypress:run
+# or
+yarn cypress:open
+yarn cypress:run
+```
+
 ## TODO
 
 [x] Simple fetch using SWR (took ~ 1 hour)
@@ -33,5 +48,5 @@ yarn start
 [x] Offline support using next-offline (took ~3 hours)
 [x] Styling using Tailwind (took ~2 hours)
 [x] Optimize Pagespeed score (took ~1 hour)
-[ ] Cypress Testing
+[x] Cypress Testing (took ~1 hour)
 [ ] react-testing-library

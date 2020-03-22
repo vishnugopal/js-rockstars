@@ -26,3 +26,6 @@ yarn-error.log*
 
 # auto-generated service-workers
 service-worker.js
+
+# cypress auto-generated
+cypress/videos/*
