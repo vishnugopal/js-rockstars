@@ -45,10 +45,10 @@ yarn cypress:run
 
 ## TODO
 
-[x] Simple fetch using SWR (took ~ 1 hour)
-[x] Infinite Pagination using useSWRPages() & IntersectionObserver (took ~3 hours)
-[x] Offline support using next-offline (took ~3 hours)
-[x] Styling using Tailwind (took ~2 hours)
-[x] Optimize Pagespeed score (took ~1 hour)
-[x] Cypress Testing (took ~1 hour)
-[ ] react-testing-library
+- [x] Simple fetch using SWR (took ~ 1 hour)
+- [x] Infinite Pagination using useSWRPages() & IntersectionObserver (took ~3 hours)
+- [x] Offline support using next-offline (took ~3 hours)
+- [x] Styling using Tailwind (took ~2 hours)
+- [x] Optimize Pagespeed score (took ~1 hour)
+- [x] Cypress Testing (took ~1 hour)
+- [ ] react-testing-library
