@@ -35,6 +35,16 @@ yarn start
 
 ## Running Tests
 
+React-testing-library unit tests can be run by:
+
+```bash
+npm test
+OR
+yarn test
+```
+
+Cypress integration tests can be run using:
+
 ```bash
 npm run cypress:open
 npm run cypress:run
