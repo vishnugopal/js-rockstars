@@ -1,8 +1,9 @@
 import useSWR from "swr";
+import React from "react";
 import { fromUnixTime, formatRelative } from "date-fns";
 
-import fetch from "../fetch";
 import StoryResponse from "../types/StoryResponse";
+import fetchStory from "../fetchStory";
 
 interface StoryProps {
   itemId: number;
@@ -17,14 +18,14 @@ const formattedRelativeDate = (unixTimestamp: number) => {
 const Story: React.FC<StoryProps> = ({ itemId, itemIndex }) => {
   const { data, error } = useSWR<StoryResponse>(
     `https://hacker-news.firebaseio.com/v0/item/${itemId}.json`,
-    fetch
+    fetchStory
   );
   if (error) return <div>failed to load</div>;
   if (!data) return <div>...</div>;
   return (
     <div className="mb-2 flex flex-row" data-testid={`story-${itemIndex}`}>
       <div
-        className="text-gray-600 text-sm align-top mr-2"
+        className="text-gray-600 text-sm align-top mr-2 w-8 text-right"
         data-testid={`story-${itemIndex}-index`}
       >
         {itemIndex}.

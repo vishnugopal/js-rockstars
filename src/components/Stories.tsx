@@ -60,7 +60,7 @@ const Stories = () => {
 
   return (
     <>
-      <div className="bg-orange-100 container max-w-lg mx-auto mt-2">
+      <div className="bg-orange-100 container max-w-2xl mx-auto mt-2">
         <div className="bg-orange-500 p-1 pb-2">
           <h1>Hacker News Stories</h1>
         </div>

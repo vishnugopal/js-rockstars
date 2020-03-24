@@ -51,4 +51,6 @@ yarn cypress:run
 - [x] Styling using Tailwind (took ~2 hours)
 - [x] Optimize Pagespeed score (took ~1 hour)
 - [x] Cypress Testing (took ~1 hour)
-- [ ] react-testing-library
+- [x] Fix Ask HN not displaying links bug (~ 10 minutes)
+- [x] right-align and increase width for number field. (~ 15 minutes)
+- [x] react-testing-library (~ 2 hours)

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build; cp .next/static/service-worker.js public/",
     "start": "next start",
+    "test": "jest",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
@@ -21,11 +22,16 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.3",
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
+    "@types/jest": "^25.1.4",
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "cypress": "^4.2.0",
+    "jest": "^25.1.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0",
+    "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3"
   }

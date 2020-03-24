@@ -1,4 +1,5 @@
-interface StoryParameters {
+interface StoryResponse {
+  id: number;
   by: string;
   url: string;
   title: string;
@@ -6,4 +7,4 @@ interface StoryParameters {
   time: number;
 }
 
-export default StoryParameters;
+export default StoryResponse;
