@@ -5,7 +5,8 @@ if (process.env.NODE_ENV === "production") {
     {
       content: [
         "./pages/**/*.{js,jsx,ts,tsx}",
-        "./src/components/**/*.{js,jsx,ts,tsx}"
+        "./src/components/**/*.{js,jsx,ts,tsx}",
+        "./src/stories/**/*.{js,jsx,ts,tsx}"
       ],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     }

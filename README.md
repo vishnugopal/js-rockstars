@@ -53,6 +53,16 @@ yarn cypress:open
 yarn cypress:run
 ```
 
+## Storybook
+
+Storybook support is available to test components in isolation:
+
+```bash
+npm run storybook
+OR
+yarn storybook
+```
+
 ## TODO
 
 - [x] Simple fetch using SWR (took ~ 1 hour)
@@ -64,3 +74,6 @@ yarn cypress:run
 - [x] Fix Ask HN not displaying links bug (~ 10 minutes)
 - [x] right-align and increase width for number field. (~ 15 minutes)
 - [x] react-testing-library (~ 2 hours)
+- [x] Storybook support (~2 hours)
+- [ ] Storybook mocking data
+- [ ] Storybook knobs
