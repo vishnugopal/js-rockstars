@@ -75,5 +75,7 @@ yarn storybook
 - [x] right-align and increase width for number field. (~ 15 minutes)
 - [x] react-testing-library (~ 2 hours)
 - [x] Storybook support (~2 hours)
-- [ ] Storybook mocking data
-- [ ] Storybook knobs
+- [x] Storybook knobs
+- [x] Upgrade to latest react and swr 0.2.0
+- [ ] Server-side data fetching (SSR)
+- [ ] Rename to js-rockstars

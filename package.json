@@ -14,16 +14,17 @@
   "dependencies": {
     "date-fns": "^2.11.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.3.1",
+    "next": "^9.3.4",
     "next-offline": "4.0.6",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "swr": "^0.1.18"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "swr": "^0.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@cypress/webpack-preprocessor": "^4.1.3",
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@storybook/addon-knobs": "^5.3.18",
     "@storybook/react": "^5.3.17",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^10.0.1",
