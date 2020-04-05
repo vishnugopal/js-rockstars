@@ -8,31 +8,38 @@
     "start": "next start",
     "test": "jest",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "storybook": "start-storybook -p 6006 -c .storybook"
   },
   "dependencies": {
     "date-fns": "^2.11.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.3.1",
+    "next": "^9.3.4",
     "next-offline": "4.0.6",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "swr": "^0.1.18"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "swr": "^0.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
     "@cypress/webpack-preprocessor": "^4.1.3",
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/react": "^5.3.17",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
     "cypress": "^4.2.0",
     "jest": "^25.1.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1"
   }
 }
