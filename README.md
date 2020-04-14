@@ -1,11 +1,16 @@
-This is an example HN app built with:
+This is an example of how to make a lot of JS tooling play well together:
 
 * [Next.js](https://nextjs.org/)
 * [SWR](https://swr.now.sh) for data fetching & infinite scroll.
 * [next-offline](https://github.com/hanford/next-offline) for offline caching.
 * [Tailwind](https://tailwindcss.com) for styling.
+* [Cypress](https://www.cypress.io) for end-to-end testing.
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for component unit testing.
+* [Storybook](https://storybook.js.org) for developing components in isolation.
 
-This app scores pretty high on the Lighthouse speed tests, see: [this](./lighthouse-score.png).
+This app also scores pretty high on the Lighthouse speed tests, see: [this](./lighthouse-score.png).
+
+[Suggestions welcome](https://github.com/vishnugopal/js-rockstars/issues/new) on what more to add to this!
 
 ## Development
 
@@ -77,5 +82,5 @@ yarn storybook
 - [x] Storybook support (~2 hours)
 - [x] Storybook knobs
 - [x] Upgrade to latest react and swr 0.2.0
+- [x] Rename to js-rockstars
 - [ ] Server-side data fetching (SSR)
-- [ ] Rename to js-rockstars
