@@ -3,7 +3,7 @@
 import * as React from "react";
 import { withKnobs, number } from "@storybook/addon-knobs";
 
-import Story from "../components/Story";
+import Story from "../src/Stories/Story";
 
 export default {
   title: "Story",

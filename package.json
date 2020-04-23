@@ -9,7 +9,8 @@
     "test": "jest",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "destiny": "destiny -w -S \"src/**/*.*\""
   },
   "dependencies": {
     "date-fns": "^2.11.0",
@@ -34,6 +35,7 @@
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "cypress": "^4.2.0",
+    "destiny": "^0.6.0",
     "jest": "^25.1.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.2.0",

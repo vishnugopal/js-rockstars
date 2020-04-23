@@ -1,8 +1,8 @@
 import useSWR, { useSWRPages } from "swr";
-import fetchStories from "../fetchStories";
-import Story from "./Story";
+import fetchStories from "./Stories/fetchStories";
+import Story from "./Stories/Story";
 import { useRef, useCallback, useEffect } from "react";
-import StoriesResponse from "../types/StoriesResponse";
+import StoriesResponse from "./StoriesResponse";
 
 const Stories = () => {
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useSWRPages<

@@ -1,7 +1,7 @@
 import fetch from "isomorphic-unfetch";
 
-import StoryIds from "./types/StoryIds";
-import StoriesResponse from "./types/StoriesResponse";
+import StoryIds from "./StoryIds";
+import StoriesResponse from "../StoriesResponse";
 
 const MAX_STORIES_TO_FETCH = 30;
 

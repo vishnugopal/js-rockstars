@@ -2,8 +2,8 @@ import useSWR from "swr";
 import React from "react";
 import { fromUnixTime, formatRelative } from "date-fns";
 
-import StoryResponse from "../types/StoryResponse";
-import fetchStory from "../fetchStory";
+import StoryResponse from "./StoryResponse";
+import fetchStory from "./fetchStory";
 
 interface StoryProps {
   itemId: number;

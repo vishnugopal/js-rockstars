@@ -1,5 +1,5 @@
 import fetch from "isomorphic-unfetch";
-import StoryResponse from "./types/StoryResponse";
+import StoryResponse from "./StoryResponse";
 
 export default async function(
   input: RequestInfo,
