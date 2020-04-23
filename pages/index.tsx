@@ -1,4 +1,4 @@
-import Stories from "../src/Stories";
+import Stories from "../components/Stories";
 import Head from "next/head";
 
 const Index = () => (

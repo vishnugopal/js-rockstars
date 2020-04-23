@@ -29,3 +29,4 @@ service-worker.js
 
 # cypress auto-generated
 cypress/videos/*
+cypress/screenshots/*
