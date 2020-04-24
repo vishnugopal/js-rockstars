@@ -66,7 +66,6 @@ yarn destiny
 
 ## Changelog
 
-- [x] Testing GitDoc
 - [x] Use destiny for logical filesystems
 - [x] Rename to js-rockstars
 - [x] Upgrade to latest react and swr 0.2.0
