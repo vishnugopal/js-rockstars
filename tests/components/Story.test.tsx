@@ -8,6 +8,9 @@ import StoryResponse from "../../components/Stories/StoryResponse";
 
 import fetchStory from "../../components/Stories/fetchStory";
 
+/**
+ * This is mostly only to solve silly Typescript errors.
+ */
 const jestTest = (test as unknown) as jest.It;
 const jestExpect = (expect as unknown) as jest.Expect;
 
